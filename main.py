@@ -43,7 +43,9 @@ def main() -> None:
         written = f.read()
     if written != LINE:
         raise SystemExit(
-            "Write verification failed: entry file content does not match the line."
+            "Write verification failed: entry file content does not match "
+            f"the line (expected {len(LINE)} characters, "
+            f"read back {len(written)})."
         )
 
 
